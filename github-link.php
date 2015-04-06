@@ -54,8 +54,10 @@ function GHL_plugin_link( $actions, $plugin_file, $plugin_data, $context ) {
     $plugin_state = get_site_transient( 'update_plugins' );
     if ( isset( $plugin_state->response[$plugin_file] )
         || isset( $plugin_state->no_update[$plugin_file] )
-    )
+    ) {
         $on_wporg = true;
+    }
+
 
     if ( ! empty( $plugin_data["GitHub Plugin URI"] ) ) {
         $icon = "icon/GitHub-Mark-32px.png";
@@ -105,5 +107,17 @@ function GHL_plugin_link( $actions, $plugin_file, $plugin_data, $context ) {
         }
     }
 
+
+    // put wp-org icon at front, if applicable
+    if ($on_wporg) {
+        $icon = "icon/wordpress_org_32x32.jpg";
+        $new_action = array ('wordpress_org' => sprintf(
+            '<img src="%s" style="vertical-align:-3px" height="16" width="16" alt="%s" />',
+            plugins_url( $icon, __FILE__ ),
+            "A wordpress.org plugin."
+        ) );
+        $actions = $new_action + $actions;//ensure at front
+
+    }
     return $actions;
 }
