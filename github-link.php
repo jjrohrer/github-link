@@ -112,8 +112,9 @@ function GHL_plugin_link( $actions, $plugin_file, $plugin_data, $context ) {
     // if from wordpress.org, show that now.
     if ( ! empty( $plugin_data['url'])
         && false !== strstr( $plugin_data['url'], '//wordpress.org/plugins/' ) ) {
+        $wp_link_template = '<a href="%s" title="%s" target="_blank"><span class="dashicons dashicons-wordpress"></span></a>';
         $new_action = array ('wordpress_org' => sprintf(
-            '<a href="%s" title="%s" target="_blank"><span class="dashicons dashicons-wordpress"></span></a>',
+            $wp_link_template,
             $plugin_data['url'],
             __( "Visit WordPress.org Plugin Page" , "github-link" )
         ) );
