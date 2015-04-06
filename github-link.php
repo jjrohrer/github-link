@@ -9,7 +9,8 @@ Author: Viktor Szépe
 Author URI: http://www.online1.hu/webdesign/
 Domain Path:       /languages
 Text Domain:       github-link
-GitHub Plugin URI: https://github.com/szepeviktor/github-link
+GitHub Plugin URI: https://github.com/jjrohrer/github-link
+Depends: github-updater
 */
 
 // Load textdomain
