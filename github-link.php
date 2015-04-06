@@ -119,6 +119,6 @@ function GHL_plugin_link( $actions, $plugin_file, $plugin_data, $context ) {
         //$actions = $new_action + $actions;//ensure at front
         $actions = array_merge( $new_action, $actions );
 
-    } 
+    }
     return $actions;
 }

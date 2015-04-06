@@ -17,6 +17,12 @@ the GitHub icon is displayed **after** other plugin actions (links), otherwise i
 - `Bitbucket Plugin URI` shown as a Bitbucket logo ![Bitbucket logo](icon/bitbucket_32_darkblue_atlassian.png)
 - `Bitbucket Branch` shown as text after the Bitbucket icon
 
+
+### Wordpress.org headers
+
+- `Plugin URI`, if it contains the string 'wordpress.org', is shown as a Wordpress logo ![Wordpress logo](icon/wordpress_org_32x32.jpg)
+
+
 ### Related Information
 
 These plugin header enable automatic updates to your GitHub or Bitbucket hosted WordPress
